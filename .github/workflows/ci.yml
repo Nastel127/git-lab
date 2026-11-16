@@ -20,3 +20,9 @@ jobs:
 
       - name: TruffleHog
         uses: trufflesecurity/trufflehog@main
+      - name: Check test secret
+        run: |
+          if grep -q "TEST_SECRET=DEMO_NOT_REAL" test-secret.txt; then
+            echo "Test secret found!"
+            exit 1
+          fi
