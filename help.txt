@@ -1,1 +1,2 @@
 Help information for users
+Updated help for the project
